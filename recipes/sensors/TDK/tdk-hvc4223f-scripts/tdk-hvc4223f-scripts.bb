@@ -6,15 +6,16 @@ LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://${COREBASE}/meta/files/common-licenses/${LICENSE};md5=89aea4e17d99a7cacdbeed46a0096b10"
 
 # Sources declaration
-SRC_URI = "git://github.com/InvenSenseInc/tdk_robotics_rbx_apps.git;protocol=https;branch=develop"
+SRC_URI = "git://github.com/InvenSenseInc/tdk_robotics_rbx_apps.git;protocol=https;nobranch=1"
+# SRCREV = "${AUTOREV}"
+SRCREV = "TDK-Robotics-RB5-0.1-test2"
 SRC_URI[md5sum] = "4bccc33cf6f1435e378611a013f01dbe"
 SRC_URI[sha256sum] = "1221a54142f1e7c17f81bdaeca9ba162627133f13cba717bc5dd403825b5f603"
 
 # Build options
-S = "${WORKDIR}/git/poky/meta-tdk-apps/recipes/tdk-hvc4223f-scripts/files"
+S = "${WORKDIR}/git/tdk-hvc4223f-scripts/files"
 
 # Package versioning
-SRCREV = "${AUTOREV}"
 PV = "1.0"
 PR = "r0"
 PV_append = "+git${SRCPV}"
