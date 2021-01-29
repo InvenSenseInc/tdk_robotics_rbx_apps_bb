@@ -22,7 +22,7 @@ DEPENDS = " \
     glib-2.0 \
 "
 #DEPENDS += "liblog"
-LDFLAGS += "-lm -L${WORKDIR} -L${S} -Wl,-Bstatic -lInvnAlgoRangeFinder -Wl,-Bdynamic -lgcc_s"
+LDFLAGS += "-lm -L${WORKDIR} -L${S} -Wl,-Bstatic -lInvnAlgoRangeFinder -Wl,-Bdynamic"
 
 # Package versioning
 PV = "1.0"
