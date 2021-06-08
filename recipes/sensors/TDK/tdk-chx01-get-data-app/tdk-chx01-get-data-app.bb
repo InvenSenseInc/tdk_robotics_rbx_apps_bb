@@ -9,7 +9,7 @@ LIC_FILES_CHKSUM = "file://${COREBASE}/meta/files/common-licenses/${LICENSE};md5
 # Sources declaration
 SRC_URI = "git://github.com/InvenSenseInc/tdk_robotics_rbx_apps.git;protocol=https;nobranch=1"
 # SRCREV = "${AUTOREV}"
-SRCREV = "TDK-Robotics-RB5-0.1-test5"
+SRCREV = "TDK-Robotics-RB5-0.1-test6"
 SRC_URI[md5sum] = "4bccc33cf6f1435e378611a013f01dbe"
 SRC_URI[sha256sum] = "1221a54142f1e7c17f81bdaeca9ba162627133f13cba717bc5dd403825b5f603"
 
@@ -22,7 +22,7 @@ DEPENDS = " \
     glib-2.0 \
 "
 #DEPENDS += "liblog"
-LDFLAGS += "-lm -L${WORKDIR} -L${S} -Wl,-Bstatic -lInvnAlgoRangeFinder -Wl,-Bdynamic"
+LDFLAGS += "-lm -L${WORKDIR} -L${S} -Wl,-Bstatic -lInvnAlgoRangeFinder -lInvnAlgoFloorTypeFxp -lInvnAlgoCliffDetection -lInvnAlgoObstaclePosition -Wl,-Bdynamic"
 
 # Package versioning
 PV = "1.0"
